@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+<Query id = "Create_Table">
+ <![CDATA[
+create table user(
+name varchar(50),
+email varchar(50),
+password varchar(50),
+phoneNumber varchar(50)
+type varchar(50),
+constraint chk_type check(type in('admin','commissioner','candidate','voter')
+)
+]]>
+</Query>
+
+<Query id = "Insert_User">
+<![CDATA[
+insert into user(Id,name,email,password,phoneNumber,Gender,NIC) values(
+?,
+?,
+?,
+?,
+?,
+?,
+?
+)
+]]>
+</Query>
+
+<Query id= "Select_User_by_emailandPW">
+<![CDATA[
+select * from user where email = ? and password = ?
+]]>
+</Query>
+
+<Query id= "Select_User_by_email">
+<![CDATA[
+select * from user where email = ?
+]]>
+</Query>
+
+<Query id= "Update_User_Details">
+<![CDATA[
+update user set name = ?,phoneNumber = ? where email = ? and password = ?
+]]>
+</Query>
+
+<Query id= "Update_User_Details_with_Password">
+<![CDATA[
+update user set name = ?,phoneNumber = ?,password = ? where email = ? and password = ?
+]]>
+</Query>
+
+<Query id = "Select_user_by_id">
+<![CDATA[
+select * from user where Id = ?
+]]>
+</Query>
+
+<Query id = "Remove_User_By_Id">
+<![CDATA[
+delete from user where Id = ?
+]]>
+</Query>
+
+</Querys>
+

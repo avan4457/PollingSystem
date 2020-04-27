@@ -1,0 +1,21 @@
+.vl {
+  border-left: 4px solid black;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+}
+
+#frmLogin{
+	width: 40%;
+	margin-right: 40px;
+	margin-left:40px;
+	float: right;
+}
+
+#frmSignup{
+	width: 40%;
+	margin-right: 40px;
+	margin-left:40px;
+	float:left
+}
